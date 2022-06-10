@@ -10,6 +10,25 @@ Add this to the manifest.json file:
 "name": "hello world",
 "container": "python",
 "execution_stage": "python main.py"
+"pre_processing_stage": "python setup.py",
+"execution_stage": "bash main.sh",
+"post_processing_stage": "python cleanup.py",
+"slurm_input_rules": {
+  "time": {
+    "max": 50,
+    "min": 10,
+    "default_value": 20,
+    "step": 1,
+    "unit": "Minutes"
+  },
+    "num_of_task": {
+     "max": 6,
+     "min": 1,
+     "default_value": 4,
+     "step": 1
+     }
+  },
+    "require_upload_data": false
 }
 ```
 
