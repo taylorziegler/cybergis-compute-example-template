@@ -15,4 +15,14 @@ Add this to the manifest file:
 For security reasons, all the repos that can be run on Cyber-GIS compute must be verified by the Compute team. For this example, we have already verified your repo, but ordinarily you would need to reach out at this point in the process.
 
 ## Run your code!
-Now, you can head over to CyberGISX to run your code. Check out https://cybergisx.cigi.illinois.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fcybergis%2Fcybergis-compute-python-sdk&urlpath=tree%2Fcybergis-compute-python-sdk%2Fhello_world.ipynb&branch=v2 for an example of how to open the UI.
+Now, you can head over to CyberGISX to run your code. Make a new notebook and add this code
+
+Cell 1:
+```
+from cybergis_compute_client import CyberGISCompute
+cybergis = CyberGISCompute(url="cgjobsup.dev.cigi.illinois.edu", isJupyter=True, protocol="HTTPS", port=443, suffix="v2")
+```
+Cell 2:
+```
+cybergis.show_ui()
+```
