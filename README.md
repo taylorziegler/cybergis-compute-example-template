@@ -28,7 +28,7 @@ Add this to the manifest.json file:
      "step": 1
      }
   },
-    "require_upload_data": false
+"require_upload_data": false
 }
 ```
 
