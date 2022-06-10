@@ -9,10 +9,9 @@ Add this to the manifest.json file:
 {
 "name": "hello world",
 "container": "python",
-"execution_stage": "python main.py"
-"pre_processing_stage": "python setup.py",
-"execution_stage": "bash main.sh",
-"post_processing_stage": "python cleanup.py",
+"pre_processing_stage": "python preprocessing.py",
+"execution_stage": "python main.py",
+"post_processing_stage": "python postprocessing.py",
 "slurm_input_rules": {
   "time": {
     "max": 50,
