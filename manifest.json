@@ -5,19 +5,27 @@
 "execution_stage": "python main.py",
 "post_processing_stage": "python postprocessing.py",
 "slurm_input_rules": {
-  "time": {
-    "max": 50,
-    "min": 10,
-    "default_value": 20,
-    "step": 1,
-    "unit": "Minutes"
-  },
-    "num_of_task": {
-     "max": 6,
-     "min": 1,
-     "default_value": 4,
-     "step": 1
-     }
-  },
+   
+           "time": {
+                "max": 10,
+                "min": 1,
+                "default_value": 1,
+                "step": 1,
+                "unit": "Hours"   
+            },
+            "num_of_task": {
+                "max": 127,
+                "min": 1,
+                "default_value": 9,
+                "step": 1
+            },
+            "memory_per_cpu": {
+                "max": 4,
+                "min": 1,
+                "default_value": 1,
+                "step": 1,
+                "unit": "GB"
+            }    
+    },
 "require_upload_data": false
 }
