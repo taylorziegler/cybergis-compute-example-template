@@ -1,0 +1,23 @@
+{
+"name": "hello world",
+"container": "python",
+"pre_processing_stage": "python preprocessing.py",
+"execution_stage": "python main.py",
+"post_processing_stage": "python postprocessing.py",
+"slurm_input_rules": {
+  "time": {
+    "max": 50,
+    "min": 10,
+    "default_value": 20,
+    "step": 1,
+    "unit": "Minutes"
+  },
+    "num_of_task": {
+     "max": 6,
+     "min": 1,
+     "default_value": 4,
+     "step": 1
+     }
+  },
+"require_upload_data": false
+}
