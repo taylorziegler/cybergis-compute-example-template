@@ -1,9 +1,7 @@
 {
 "name": "hello world",
 "container": "python",
-"pre_processing_stage": "python preprocessing.py",
 "execution_stage": "python main.py",
-"post_processing_stage": "python postprocessing.py",
 "slurm_input_rules": {
    
            "time": {
